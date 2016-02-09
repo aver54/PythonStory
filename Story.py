@@ -1,4 +1,4 @@
-Explore = {"look around","explore" "look", "adventure","search", "EXPLORE"}
+Explore = {"look around","explore" "look", "adventure","search", "EXPLORE", 'investagate'}
 stand = {"sit","Do nothing", "do nothing", "STAND"}
 yes = {'yup', 'yea', 'Yes', 'yeah', 'si'}
 no = {'naw', 'No','nope', 'nay'}
