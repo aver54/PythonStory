@@ -3,8 +3,8 @@ explore = {"look around","explore", "look", "adventure","search", "EXPLORE", "in
 stand = {"sit","Do nothing", "do nothing", "STAND"}
 yes = {'yup', 'yea', 'Yes', 'yeah', 'si'}
 no = {'naw', 'No','nope', 'nay'}
-walk = {'walk away', 'WALK', 'go away', 'Walk'}
-open = {'open','open the door', 'OPEN'}
+walk = {'walk away', 'WALK', 'go away', 'Walk', 'leave', 'leave the man'}
+open = {'open','open the door', 'OPEN', 'try', 'Try', 'Try to open the door'}
 
 
 def story():
@@ -20,8 +20,15 @@ def story():
         print "You choose not to investagate the screaming"
         if action in yes:
             print 'You choose to investigate the screaming, you find that the screamimg is behind a locked door.'
-            action = raw_input("Open the door or walk away?")
-            if action in
+            action = raw_input("Try to Open the door or walk away?")
+            if action in walk:
+                print 'you have chosen to walk away from the door, you find your self in a dark and musty boiler room.'
+                action = raw_input('Do you choose to explore or leave the room?')
+            elif action in open:
+                print 'you have chosen to tey to open the door, you find a key onthe ground, you open the door and find a man on a table in a straight jacket tied to the table, it is evident that the man cannot see or hear.'
+                action = raw_input('Do you help the man or do you leave him alone?')
+                if action in walk:
+                    print
     elif action in stand:
         print 'You chose to sit where you have woken, you hear a faint screaming.'
         action = raw_input()
