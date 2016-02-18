@@ -1,6 +1,6 @@
 
 explore = {"look around","explore", "look", "adventure","search", "EXPLORE", "investagate", "Explore"}
-stand = {"sit","Do nothing", "do nothing", "STAND"}
+stand = {"sit","Do nothing", "do nothing", "STAND", 'nothing'}
 yes = {'yup', 'yea', 'Yes', 'yeah','yes', 'si'}
 no = {'naw', 'No','nope', 'no', 'nay'}
 walk = {'walk away', 'WALK', 'go away', 'Walk', 'leave', 'leave the man'}
@@ -12,7 +12,7 @@ def story():
     print "By Avery Fischer and Ryan Baraloto."
     print "You have woken up in a abandend asylum."
     print "What course of action would you like to take? Explore or Do nothing."
-    action = raw_input("What do you want to do?(Explore/Nothing)\nex")
+    action = raw_input("What do you want to do?(Explore/Nothing)\n")
     if action in explore:
         print 'You explore the asylum, you hear screaming, do you chose to investigate?'
         action = raw_input("(yes or No)\n")
