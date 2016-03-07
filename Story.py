@@ -4,7 +4,7 @@ stand = {"sit","Do nothing", "do nothing", "STAND", 'nothing'}
 yes = {'yup', 'yea', 'Yes', 'yeah','yes', 'si'}
 no = {'naw', 'No','nope', 'no', 'nay'}
 walk = {'walk away', 'WALK', 'go away', 'Walk', 'leave', 'leave the man', 'leave him'}
-open = {'open','open the door', 'OPEN', 'try', 'Try', 'Try to open the door'}
+open = {'open','open the door', 'OPEN', 'try', 'Try', 'Try to open the door', 'try to open the door'}
 
 
 def story():
@@ -34,7 +34,9 @@ def story():
             if action in walk:
                 print 'you chose to leve the man alone '
     elif action in stand:
-        print 'You chose to sit where you have woken, you hear a faint screaming.'
-        action = raw_input()
+        print 'You chose to sit where you have woken, you hear a faint screaming. do you chose to investa gate?'
+        action = raw_input('Yes or No?\n')
+        if action in yes:
+            print 'you walk twards the sound, and you gind the screaming is behind a locked door. Try to open the door?'
 
 story()
