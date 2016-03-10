@@ -1,4 +1,4 @@
-
+from Tkinter import *
 explore = {"look around","explore", "look", "adventure","search", "EXPLORE", "investagate", "Explore", 'try to pass the figure','Try to pass the figure', 'pass'}
 stand = {"sit","Do nothing", "do nothing", "STAND", 'nothing', 'sit still', }
 yes = {'yup', 'yea', 'Yes', 'yeah','yes', 'si'}
@@ -8,7 +8,6 @@ open = {'open','open the door', 'OPEN', 'try', 'Try', 'Try to open the door', 't
 
 
 def story():
-    from Tkinter import *
     root = Tk()
 
     canvas = Canvas(root, height=600, width=600, relief=RAISED, bg='white')
