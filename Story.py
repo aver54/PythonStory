@@ -34,6 +34,9 @@ print "The Asylum"
 print "By Avery Fischer and Ryan Baraloto."
 print "You have woken up in a abandend asylum."
 print "What course of action would you like to take? Explore or Do nothing."
+root = Tk()
+image = Image.open('room.jpg')
+photo = ImageTk.PhotoImage(image)
 action = raw_input("What do you want to do?(Explore/Nothing)\n")
 if action in explore:
     print 'You explore the asylum, you hear screaming, do you chose to investigate?'
