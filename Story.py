@@ -44,17 +44,32 @@ if action in explore:
         photo = ImageTk.PhotoImage(image)
         print "You choose not to investagate the screaming, you continue, you find your self in a dark and musty boiler room."
         action = raw_input("do you explore the dark room, or do you walk away")
+        if action in explore:
+            print 'You explore the room, as you are walking you you hear a crack in the floor, \na few moments later you fall threw the floor to your death,\n The end'
     elif action in yes:
+        root = Tk()
+        image = Image.open('locked.jpg')
+        photo = ImageTk.PhotoImage(image)
         print 'You choose to investigate the screaming, you find that the screamimg is behind a locked door.'
         action = raw_input("Try to Open the door or walk away?")
         if action in walk:
+            root = Tk()
+            image = Image.open('Black_Mold_Room.jpg')
+            photo = ImageTk.PhotoImage(image)
             print 'you have chosen to walk away from the door, you find your self in a dark and musty boiler room.'
             action = raw_input('Do you choose to explore or leave the room?\n')
             if action in explore:
-                print "you explore the dark room, an intense smell enters you naustrals but you cant quite tell what it is, do you continue?"
-                action = raw_input('explore or turn back?')
+                root = Tk()
+                image = Image.open('Hole_in_Barn_Floor.png')
+                photo = ImageTk.PhotoImage(image)
+                print "You explore the room, as you are walking you you hear a crack in the floor, \na few moments later you fall threw the floor to your death,\n The end"
+            elif action in walk:
+                print ""
         elif action in open:
-            print 'you have chosen to tey to open the door, you find a key on the ground, you open the door and find a man on a table in a straight jacket tied to the table, it is evident that the man cannot see or hear.'
+            root = Tk()
+            image = Image.open('straight.jpg')
+            photo = ImageTk.PhotoImage(image)
+            print 'you have chosen to try to open the door, you find a key on the ground, you open the door and find a man on a table in a straight jacket tied to the table, it is evident that the man cannot see or hear.'
             action = raw_input('Do you help the man or do you leave him alone?')
             if action in walk:
                 print 'you chose to leve the man alone '
