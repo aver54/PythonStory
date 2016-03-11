@@ -1,4 +1,5 @@
 from Tkinter import*
+from PIL import ImageTk, Image
 explore = {"look around","explore", "look", "adventure","search", "EXPLORE", "investagate", "Explore", 'try to pass the figure','Try to pass the figure', 'pass'}
 stand = {"sit","Do nothing", "do nothing", "STAND", 'nothing', 'sit still', }
 yes = {'yup', 'yea', 'Yes', 'yeah','yes', 'si'}
@@ -38,6 +39,9 @@ if action in explore:
     print 'You explore the asylum, you hear screaming, do you chose to investigate?'
     action = raw_input("(yes or No)\n")
     if action in no:
+        root = Tk()
+        image = Image.open('Black_Mold_Room.jpg')
+        photo = ImageTk.PhotoImage(image)
         print "You choose not to investagate the screaming, you continue, you find your self in a dark and musty boiler room."
         action = raw_input("do you explore the dark room, or do you walk away")
     elif action in yes:
