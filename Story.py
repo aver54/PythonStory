@@ -28,7 +28,7 @@ def story():
  windowbar = canvas.create_rectangle(410, 375, 420, 180, fill ='black', outline= 'black')
  windowbar = canvas.create_rectangle(380, 375, 390, 180, fill ='black', outline= 'black')
  root.mainloop()
-
+story()
 print "The Asylum"
 print "By Avery Fischer and Ryan Baraloto."
 print "You have woken up in a abandend asylum."
