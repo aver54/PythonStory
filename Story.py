@@ -37,6 +37,10 @@ print "What course of action would you like to take? Explore or Do nothing."
 root = Tk()
 image = Image.open('room.jpg')
 photo = ImageTk.PhotoImage(image)
+label = Label(image=photo)
+label.image = photo
+label.pack()
+root.mainloop()
 action = raw_input("What do you want to do?(Explore/Nothing)\n")
 if action in explore:
     print 'You explore the asylum, you hear screaming, do you chose to investigate?'
@@ -100,7 +104,14 @@ elif action in stand:
     print 'You chose to sit where you have woken, you hear a faint screaming. do you chose to investa gate?'
     action = raw_input('Yes or No?\n')
     if action in yes:
-        print 'you walk twards the sound, and you gind the screaming is behind a locked door. Try to open the door?'
+        root = Tk()
+        image = Image.open('locked.jpg')
+        photo = ImageTk.PhotoImage(image)
+        label = Label(image=photo)
+        label.image = photo
+        label.pack()
+        root.mainloop()
+        print 'you walk twards the sound, and you find the screaming is behind a locked door. Try to open the door?'
         action = raw_input('Yes or No?')
     elif action in no:
         print 'You dont investigate the screaming, it becoms louder, do you investagate?'
