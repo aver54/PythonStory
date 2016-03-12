@@ -6,6 +6,7 @@ yes = {'yup', 'yea', 'Yes', 'yeah','yes', 'si'}
 no = {'naw', 'No','nope', 'no', 'nay'}
 walk = {'walk away', 'WALK', 'go away', 'Walk', 'leave', 'leave the man', 'leave him'}
 open = {'open','open the door', 'OPEN', 'try', 'Try', 'Try to open the door', 'try to open the door'}
+help = {'help', 'help the man', 'help him'}
 
 
 def story():
@@ -45,6 +46,7 @@ action = raw_input("What do you want to do?(Explore/Nothing)\n")
 if action in explore:
     print 'You explore the asylum, you hear screaming, do you chose to investigate?'
     action = raw_input("(yes or No)\n")
+    #DONE
     if action in no:
         root = Tk()
         image = Image.open('Black_Mold_Room.jpg')
@@ -60,7 +62,7 @@ if action in explore:
         elif action in walk:
             print 'You chose to walk away from the room, \nas you are walking away from the room, \na figure exist a room in the hallway, \nyou try to run but you trip on a pipe, \nthe figure bends down and chokes you to death.'
 
-
+    #DONE
     elif action in yes:
         root = Tk()
         image = Image.open('locked.jpg')
@@ -92,6 +94,7 @@ if action in explore:
                 print "You explore the room, as you are walking you you hear a crack in the floor, \na few moments later you fall threw the floor to your death,\n The end"
             elif action in walk:
                 print "You chose to walk away from the room, \nas you are walking away from the room, \na figure exist a room in the hallway, \nyou try to run but you trip on a pipe, \nthe figure bends down and chokes you to death."
+        #DONE
         elif action in open:
             root = Tk()
             image = Image.open('straight.jpg')
@@ -103,7 +106,13 @@ if action in explore:
             print 'you have chosen to try to open the door, you find a key on the ground, you open the door and find a man on a table in a straight jacket tied to the table, it is evident that the man cannot see or hear.'
             action = raw_input('Do you help the man or do you leave him alone?')
             if action in walk:
-                print 'you chose to leve the man alone '
+                print 'you chose to leve the man alone , as you are leaving the room, the man breaks free and stabs you to death.'
+                print 'The End'
+            elif action in help:
+                print 'you try to help the man however, as you approch him, he breaks free from his strapps and kills you.'
+                print 'The End'
+
+#DONE
 elif action in stand:
     print 'You chose to sit where you have woken, you hear a faint screaming. do you chose to investa gate?'
     action = raw_input('Yes or No?\n')
@@ -117,6 +126,30 @@ elif action in stand:
         root.mainloop()
         print 'you walk twards the sound, and you find the screaming is behind a locked door. Try to open the door?'
         action = raw_input('Yes or No?')
+        if action in yes:
+            print"you open the door just buy kicking it, once open, you trip on a slab and imply yourself on a metal rod."
+            print 'the end'
+        elif action in no:
+            print 'You turn away from the door, as you are walking away you come to a door in the hallway with light shining threw.'
+            action = raw_input('Try to open the door? (yes or no)')
+            if action in yes:
+                print 'You open the door with ease, the door leads to the outside world.'
+                print
+                print 'Congrats, you beat our game'
+            elif action in no:
+                root = Tk()
+                image = Image.open('Hole_in_Barn_Floor.png')
+                photo = ImageTk.PhotoImage(image)
+                label = Label(image=photo)
+                label.image = photo
+                label.pack()
+                root.mainloop()
+                print 'You turn away from the door, as you are walking you fall threw a hole to your death.'
+                print 'The end'
+
+
+
+    #DONE
     elif action in no:
         print 'You dont investigate the screaming, it becoms louder, do you investagate?'
         action = raw_input('yes or no?\n')
@@ -142,7 +175,7 @@ elif action in stand:
                 print
                 print "The end"
             elif action in explore:
-                print 'you make an effort to pass the figure and it grabs ahold of you and rips you in half'
+                print 'you make an effort to pass the figure and it grabs ahold of you and rips you in half.'
                 print
                 print
                 print "The end"
