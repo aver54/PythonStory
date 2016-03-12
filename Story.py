@@ -57,6 +57,10 @@ if action in explore:
         action = raw_input("do you explore the dark room, or do you walk away?\n")
         if action in explore:
             print 'You explore the room, as you are walking you you hear a crack in the floor, \na few moments later you fall threw the floor to your death,\n The end'
+        elif action in walk:
+            print 'You chose to walk away from the room, \nas you are walking away from the room, \na figure exist a room in the hallway, \nyou try to run but you trip on a pipe, \nthe figure bends down and chokes you to death.'
+
+
     elif action in yes:
         root = Tk()
         image = Image.open('locked.jpg')
@@ -87,7 +91,7 @@ if action in explore:
                 root.mainloop()
                 print "You explore the room, as you are walking you you hear a crack in the floor, \na few moments later you fall threw the floor to your death,\n The end"
             elif action in walk:
-                print ""
+                print "You chose to walk away from the room, \nas you are walking away from the room, \na figure exist a room in the hallway, \nyou try to run but you trip on a pipe, \nthe figure bends down and chokes you to death."
         elif action in open:
             root = Tk()
             image = Image.open('straight.jpg')
@@ -117,6 +121,19 @@ elif action in stand:
         print 'You dont investigate the screaming, it becoms louder, do you investagate?'
         action = raw_input('yes or no?\n')
         if action in no:
+            print "you see a figure in the hallway shuffling twards your room, \nscreeaming uncontrolably it looks as though it sees you and is blocking your only exit."
+            action = raw_input("Do you sit still or try to pass the figure?\n")
+            if action in stand:
+                print 'The figure approaches and it appears to be a man in a straight jacket, he walks closer, \nstill screaming he breaks lose from the jacket and starts walking faster twards you.\nTraped you make an effort to leave the room but he grabs ahold of you and strangles you to death.'
+                print
+                print
+                print "The end"
+            elif action in explore:
+                print 'you make an effort to pass the figure and it grabs ahold of you and rips you in half'
+                print
+                print
+                print "The end"
+        elif action in yes:
             print "you see a figure in the hallway shuffling twards your room, \nscreeaming uncontrolably it looks as though it sees you and is blocking your only exit."
             action = raw_input("Do you sit still or try to pass the figure?\n")
             if action in stand:
